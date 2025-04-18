@@ -36,6 +36,7 @@ header{
     min-height: 150px;
     text-align: center;
     padding-top: 40px;
+    display: fixed;
 }
 header > h1{
     color: white;

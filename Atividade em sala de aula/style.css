@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+
+@font-face {
+  font-family: 'Android';
+  src: url('idroid.otf') format('opentype');
+  font-weight: normal;
+}
+
+
+:root {
+  --cor-primaria: #1a5c37;
+  --cor-secundaria: #83e1ad;
+  --cor-fundo: #ebe5c5;
+  --cor-destaque: #2fa866;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cor-fundo);
+}
+
+header {
+  background-image: linear-gradient(to bottom, var(--cor-destaque), var(--cor-primaria));
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+header h1 {
+  font-family: 'Android', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+header p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: auto;
+}
+
+nav {
+  background-color: var(--cor-primaria);
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: var(--cor-destaque);
+  border-radius: 5px;
+}
+
+main {
+  min-width: 300px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+article h2 {
+  font-family: 'Android', sans-serif;
+  color: var(--cor-primaria);
+  margin: 20px 0;
+}
+
+article p {
+  margin: 15px 0;
+  text-align: justify;
+  text-indent: 30px;
+  line-height: 1.5em;
+}
+
+.destaque {
+  background-color: var(--cor-secundaria);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.imagem-destaque {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.imagem-destaque img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.curiosidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card-curiosidade {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-top: 4px solid var(--cor-destaque);
+}
+
+.card-curiosidade h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: var(--cor-primaria);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .curiosidades {
+    grid-template-columns: 1fr;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+}
